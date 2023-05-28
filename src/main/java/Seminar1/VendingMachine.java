@@ -1,3 +1,7 @@
+/*
+Методы автомата товаров
+ */
+
 package Seminar1;
 
 import java.util.ArrayList;
