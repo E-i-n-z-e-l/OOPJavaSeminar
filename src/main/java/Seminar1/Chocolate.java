@@ -1,3 +1,7 @@
+/*
+Шоколад
+ */
+
 package Seminar1;
 
 public class Chocolate extends Product {
