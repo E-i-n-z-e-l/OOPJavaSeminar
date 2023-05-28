@@ -1,3 +1,7 @@
+/*
+Сыр
+ */
+
 package Seminar1;
 
 public class Cheese extends Product {
