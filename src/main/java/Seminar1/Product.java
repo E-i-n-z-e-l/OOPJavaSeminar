@@ -1,3 +1,7 @@
+/*
+Продукты и @Override
+ */
+
 package Seminar1;
 
 public class Product {
