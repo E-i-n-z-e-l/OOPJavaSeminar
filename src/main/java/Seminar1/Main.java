@@ -1,3 +1,7 @@
+/*
+Запуск автомата
+ */
+
 package Seminar1;
 
 import Seminar1.Cheese;
