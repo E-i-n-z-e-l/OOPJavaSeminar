@@ -1,3 +1,6 @@
+/*
+Оружие топор
+ */
 package Seminar4.weapons.meleeWeapon;
 
 public class Axe implements Melee{ // класс оружия - топор;
