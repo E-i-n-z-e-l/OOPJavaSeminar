@@ -1,3 +1,6 @@
+/*
+Лук и его методы
+ */
 package Seminar4.weapons.rangedWeapon;
 
 public class Bow implements Ranged{ // Класс лук;
