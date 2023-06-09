@@ -1,3 +1,7 @@
+/*
+Интерфейс дальнобойного оружия
+ */
+
 package Seminar4.weapons.rangedWeapon;
 
 import Seminar4.weapons.Weapon;
