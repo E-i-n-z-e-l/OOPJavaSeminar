@@ -1,3 +1,7 @@
+/*
+Класс команд и методы команд
+ */
+
 package Seminar4;
 
 import Seminar4.warriors.Archer;
