@@ -1,3 +1,6 @@
+/*
+Арбалет и его методы
+ */
 package Seminar4.weapons.rangedWeapon;
 
 public class CrossBow implements Ranged{ // Класс Арбалет;
