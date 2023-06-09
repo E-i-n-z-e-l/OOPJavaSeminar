@@ -1,3 +1,7 @@
+/*
+Класс битвы и метод битвы
+ */
+
 package Seminar4;
 
 import Seminar4.warriors.Warrior;
