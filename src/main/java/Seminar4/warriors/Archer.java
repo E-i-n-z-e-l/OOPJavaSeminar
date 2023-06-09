@@ -1,3 +1,6 @@
+/*
+Вид воина Лучник
+ */
 package Seminar4.warriors;
 
 import Seminar4.weapons.Weapon;
