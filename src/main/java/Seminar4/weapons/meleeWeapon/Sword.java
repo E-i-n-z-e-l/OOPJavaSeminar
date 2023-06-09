@@ -1,3 +1,6 @@
+/*
+Оружие меч
+ */
 package Seminar4.weapons.meleeWeapon;
 
 public class Sword implements Melee{ // Меч;
