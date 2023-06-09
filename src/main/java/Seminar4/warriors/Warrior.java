@@ -1,3 +1,7 @@
+/*
+Класс воин и его методы
+ */
+
 package Seminar4.warriors;
 
 import Seminar4.weapons.Weapon;
