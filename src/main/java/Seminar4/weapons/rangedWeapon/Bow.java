@@ -1,13 +1,13 @@
 package Seminar4.weapons.rangedWeapon;
 
-public class Bow implements Ranged{
+public class Bow implements Ranged{ // Класс лук;
     @Override
-    public int damage() {
+    public int damage() { // Урон лука;
         return 8;
     }
 
     @Override
-    public int distance() {
+    public int distance() { // Дистанция стрельбы;
         return 50;
     }
 

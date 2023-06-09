@@ -1,5 +1,5 @@
 package Seminar4.weapons;
 
-public interface Weapon {
-    int damage();
+public interface Weapon { // создаем интерфейс оружия;
+    int damage(); // поле урон от оружия;
 }
