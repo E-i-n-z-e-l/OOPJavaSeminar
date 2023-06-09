@@ -1,3 +1,6 @@
+/*
+Вид воина Пехотинец
+ */
 package Seminar4.warriors;
 
 import Seminar4.weapons.meleeWeapon.Melee;
