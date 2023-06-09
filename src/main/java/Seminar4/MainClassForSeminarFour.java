@@ -1,3 +1,7 @@
+/*
+Файл Main
+ */
+
 package Seminar4;
 
 import Seminar4.warriors.Archer;
