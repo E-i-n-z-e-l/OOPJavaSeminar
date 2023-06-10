@@ -54,15 +54,24 @@ public class Team<T extends Warrior> implements Iterable<T> { // Класс ко
         return teamAttack;
     }
 
+    public int getTeamDefense() { // Метод подсчета максимальной защиты команд;
+        int teamDefense = 0;
+        for (T t : this) { // Пишем this потому что есть Итератор "Т";
+            teamDefense += t.getProtection().blockDamage(); //
+        }
+        return teamDefense;
+    }
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
         for (T t : this) { // Пишем this потому что есть Итератор "Т";
             builder.append(t).append('\n');
         }
-        builder.append(String.format("TeamAttack: %d ", getTeamAttack()));
-        builder.append(String.format("TeamHealth: %d ", getTeamHealth()));
-        builder.append(String.format("TeamRange: %d ", maxAttackDistance()));
+        builder.append(String.format("Атака команды: %d ", getTeamAttack()));
+        builder.append(String.format("Здоровье команды: %d ", getTeamHealth()));
+        builder.append(String.format("Дальность атаки команды: %d ", maxAttackDistance()));
+        builder.append(String.format("Защита команды: %d ", getTeamDefense()));
         return builder.toString();
     }
 }

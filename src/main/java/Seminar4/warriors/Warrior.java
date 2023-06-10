@@ -4,21 +4,25 @@
 
 package Seminar4.warriors;
 
+import Seminar4.weapons.Protection;
 import Seminar4.weapons.Weapon;
 
 import java.util.Random;
 /*
 Создаем абстрактный метод "Warrior" (так называемый скелет всех будущих подклассов, чтобы избежать копирования кода);
  */
-public abstract class Warrior<W extends Weapon> { // Создаем поля - имя, здоровье, оружие;
+public abstract class Warrior<W extends Weapon, P extends Protection> { // Создаем поля - имя, здоровье, оружие, щит;
     private final String name; // "final" не позволяет более изменять поле;
     private int healthPoint; // с помощью "private" защищаем наши переменные от внешнего воздействия;
     private W weapon;
 
-    public Warrior(String name, int healthPoint, W weapon) {
+    private P protection;
+
+    public Warrior(String name, int healthPoint, W weapon, P protection) {
         this.name = name;
         this.healthPoint = healthPoint;
         this.weapon = weapon;
+        this.protection = protection;
     }
 
     public String getName() { // метод получения имени;
@@ -33,6 +37,17 @@ public abstract class Warrior<W extends Weapon> { // Создаем поля - �
         return weapon;
     } // Этот метод используем в классе Archer;
 
+
+    public P getProtection() { // Метод получения шита;
+        return protection;
+    }
+
+    public int defense() { // Метод блокирования урона;
+        Random rndD = new Random();
+
+        return rndD.nextInt(0, protection.blockDamage() + 1);
+    }
+
     public void setHealthPoint(int healthPoint) {
         this.healthPoint = healthPoint;
     }
@@ -41,7 +56,7 @@ public abstract class Warrior<W extends Weapon> { // Создаем поля - �
         this.weapon = weapon;
     }
 /*
-Метод нанесения урона - "hit()";
+Метод урона оружием - "hit()";
  */
     public int hit() {
         Random rnd = new Random();
@@ -51,15 +66,27 @@ public abstract class Warrior<W extends Weapon> { // Создаем поля - �
 /*
 Метод получения урона - "reduceHealth(int damage)";
  */
-    public void reduceHealth(int damage) {
-        healthPoint -= damage;
-        if (healthPoint < 0) { // Чтобы при получении урона здоровье не уходило в минус;
-            healthPoint = 0;
+    public void reduceHealth(int damage, int block) { // Метод блока щитом;
+
+        if (block >= 0) {
+            if (block > damage) {
+                healthPoint = healthPoint;
+                if (healthPoint < 0) { // Чтобы при получении урона здоровье не уходило в минус;
+                    healthPoint = 0;
+                }
+            }
+            if (damage >= block) {
+                healthPoint = healthPoint - (damage - block);
+                if (healthPoint < 0) { // Чтобы при получении урона здоровье не уходило в минус;
+                    healthPoint = 0;
+                }
+            }
         }
+
     }
 
     @Override
     public String toString() {
-        return String.format("Name: %s, Weapon: %s, HealthPoint: %d", name, weapon, healthPoint);
+        return String.format("Имя: %s, Оружие: %s, Здоровье: %d, Щит: %s", name, weapon, healthPoint, protection);
     }
 }

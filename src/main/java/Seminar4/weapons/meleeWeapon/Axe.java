@@ -11,6 +11,6 @@ public class Axe implements Melee{ // класс оружия - топор;
 
     @Override
     public String toString() {
-        return String.format("Axe: %d ", damage()); // Топор наносит столько-то урона(вывод в терминал);
+        return String.format("Топор: %d ", damage()); // Топор наносит столько-то урона(вывод в терминал);
     }
 }

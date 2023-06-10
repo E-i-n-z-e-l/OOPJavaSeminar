@@ -16,6 +16,6 @@ public class Bow implements Ranged{ // Класс лук;
 
     @Override
     public String toString() {
-        return String.format("Bow: %d ", damage());
+        return String.format("Лук: %d ", damage());
     }
 }

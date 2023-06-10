@@ -11,6 +11,6 @@ public class Sword implements Melee{ // Меч;
 
     @Override
     public String toString() {
-        return String.format("Sword: %d ", damage()); // Меч наносит столько-то урона(вывод в терминал);
+        return String.format("Меч: %d ", damage()); // Меч наносит столько-то урона(вывод в терминал);
     }
 }

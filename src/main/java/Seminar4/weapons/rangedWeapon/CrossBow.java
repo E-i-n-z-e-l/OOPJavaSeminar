@@ -16,7 +16,7 @@ public class CrossBow implements Ranged{ // Класс Арбалет;
 
     @Override
     public String toString() {
-        return String.format("CrossBow: %d ", damage());
+        return String.format("Арбалет: %d ", damage());
     }
 
 }
