@@ -1,5 +1,5 @@
 /*
-Вид воина Лучник
+Вид воина Лучник.
  */
 package Seminar4.warriors;
 
