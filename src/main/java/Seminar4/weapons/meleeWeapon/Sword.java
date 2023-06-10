@@ -1,5 +1,5 @@
 /*
-Оружие меч
+Оружие меч.
  */
 package Seminar4.weapons.meleeWeapon;
 
