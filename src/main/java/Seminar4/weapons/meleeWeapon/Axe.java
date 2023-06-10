@@ -1,5 +1,5 @@
 /*
-Оружие топор
+Оружие топор.
  */
 package Seminar4.weapons.meleeWeapon;
 
