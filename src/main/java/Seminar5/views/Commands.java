@@ -4,7 +4,7 @@ public enum Commands {
     NONE,
     READ,
     CREATE,
-    UPDATE,
+    UPDATE, // Изменение записи;
     LIST,
     DELETE,
     EXIT
